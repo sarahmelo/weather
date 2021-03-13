@@ -1,8 +1,10 @@
 <template>
   <v-app>
     <v-main>
-      <Search />
-      <Display />
+      <v-col>
+        <Search />
+        <Display />
+      </v-col>
     </v-main>
   </v-app>
 </template>
@@ -19,8 +21,13 @@ export default {
     Display,
   },
 
-  data: () => ({
-    //
-  }),
+  data: () => ({}),
 };
 </script>
+
+<style>
+body {
+  height: 100vh;
+  width: 100vw;
+}
+</style>
