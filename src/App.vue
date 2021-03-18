@@ -3,7 +3,6 @@
     <v-main>
       <v-col>
         <Search />
-        <Display />
       </v-col>
     </v-main>
   </v-app>
@@ -11,14 +10,12 @@
 
 <script>
 import Search from "./components/Search";
-import Display from "./components/Display";
 
 export default {
   name: "App",
 
   components: {
     Search,
-    Display,
   },
 
   data: () => ({}),

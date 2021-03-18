@@ -16,15 +16,22 @@
     </v-row>
     <br />
     {{ this.todo }}
+    <v-spacer></v-spacer>
+    <Display :weatherData="todo" />
   </v-col>
 </template>
 
 <script>
+import Display from "./Display";
 export default {
   name: "search",
+  props: {},
+  components: {
+    Display,
+  },
   data: () => {
     return {
-      todo: [],
+      todo: {},
       city: "",
       state: "",
     };
@@ -32,7 +39,7 @@ export default {
   methods: {
     async locationData() {
       let response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.state},br&appid=bff4ad52bd5c29357f5626257723a26b`
+        `https://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.state},br&lang=pt_br&units=metric&appid=bff4ad52bd5c29357f5626257723a26b`
       );
       this.todo = await response.json();
       console.log(this.todo);
