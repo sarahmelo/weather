@@ -1,7 +1,7 @@
 <template>
   <v-col>
     <v-card>temperatura atual</v-card>
-    {{ this.todo }}
+    <!-- {{ this.todo }} -->
     <v-col> colunas com próximas temperaturas </v-col>
   </v-col>
 </template>
@@ -10,7 +10,7 @@
 export default {
   name: "display",
   props: {
-    weatherData: Array,
+    weatherResponse: Array,
   },
 };
 </script>
